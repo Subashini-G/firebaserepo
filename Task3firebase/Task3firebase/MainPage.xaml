@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Task3firebase.MainPage">
+
+    <ScrollView HeightRequest="3000">
+        <StackLayout Padding="25,60,25,20">
+        <Label Text="Login" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center"/>
+        <StackLayout Padding="0,35,0,35" Spacing="15">
+        <Label Text="Username"/>
+        <StackLayout Orientation="Horizontal">
+        <Image Source="/Users/SU20380276/Downloads/user.png" Aspect="AspectFill"/>
+        <Entry Placeholder="Type your username" HorizontalOptions="FillAndExpand" Text="{Binding username}"/>
+        </StackLayout>
+        <Label Text="Password"/>
+        <StackLayout Orientation="Horizontal">
+        <Image Source="/Users/SU20380276/Downloads/passwordicon.png"/>
+        <Entry Placeholder="Type your password" IsPassword="True" HorizontalOptions="FillAndExpand" Text="{Binding password}"/>
+        </StackLayout>
+        <Label Text="Forgot password?" HorizontalOptions="End"/>
+        </StackLayout>
+        <Button Text="LOGIN" Command="{Binding MainPageLoginCommand}" Style="{StaticResource buttonStyle}"/>
+        <StackLayout Padding="25,60" Spacing="15">
+        <Label Text="Or Sign Up Using" HorizontalOptions="Center"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+        <Image Source="/Users/SU20380276/Downloads/facebook.png"/>
+            <Image Source="/Users/SU20380276/Downloads/twitter.png"/>
+            <Image Source="/Users/SU20380276/Downloads/google.png"/>
+        </StackLayout>
+        </StackLayout>
+        <Label Text="Or Sign Up Using" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+        <Button Text="SIGN UP" VerticalOptions="End" HorizontalOptions="CenterAndExpand" TextColor="Black" FontAttributes="Bold" Command="{Binding SignUpCommand}"/>
+           
+    </StackLayout>
+        </ScrollView>
+
+</ContentPage>
+
